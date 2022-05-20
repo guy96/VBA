@@ -1,0 +1,105 @@
+Sub range_upgrade1()
+
+Dim linha As Integer
+
+For linha = 2 To 1776
+
+
+    If Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 50 Then
+    
+    Cells(linha, 12).Value = "Até R$50"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 100 Then
+    
+    Cells(linha, 12).Value = "Entre R$51 e R$100"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 150 Then
+    
+    Cells(linha, 12).Value = "Entre R$101 e R$150"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 200 Then
+    
+    Cells(linha, 12).Value = "Entre R$151 e R$200"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 250 Then
+    
+    Cells(linha, 12).Value = "Entre R$200 e R$250"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 300 Then
+    
+    Cells(linha, 12).Value = "Entre R$250 e R$300"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 350 Then
+    
+    Cells(linha, 12).Value = "Entre R$300 e R$350"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 400 Then
+    
+    Cells(linha, 12).Value = "Entre R$350 e R$400"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value > 400 Then
+    
+    Cells(linha, 12).Value = "Acima de R$400"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value = "-" Then
+    
+    Cells(linha, 12).Value = ""
+    
+    Else
+    Cells(linha, 12).Value = ""
+    
+    
+End If
+
+Next
+
+
+End Sub
+
+
+Sub range_upgrade2()
+
+Dim linha As Integer
+
+For linha = 2 To 1776
+
+
+    If Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 200 Then
+    
+    Cells(linha, 12).Value = "Até R$200"
+       
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 250 Then
+    
+    Cells(linha, 12).Value = "Entre R$200 e R$250"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 300 Then
+    
+    Cells(linha, 12).Value = "Entre R$250 e R$300"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 350 Then
+    
+    Cells(linha, 12).Value = "Entre R$300 e R$350"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value <= 400 Then
+    
+    Cells(linha, 12).Value = "Entre R$350 e R$400"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value > 400 Then
+    
+    Cells(linha, 12).Value = "Acima de R$400"
+    
+    ElseIf Cells(linha, 7).Value = "Upgrade" And Cells(linha, 10).Value = "-" Then
+    
+    Cells(linha, 12).Value = ""
+    
+    Else
+    Cells(linha, 12).Value = ""
+    
+    
+End If
+
+Next
+
+
+End Sub
+

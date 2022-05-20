@@ -1,0 +1,28 @@
+Function getLocation(lati, longi, apikey)
+    Dim url As String
+    url_1 = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" & lati & "," & longi & "&key=" & apikey
+    url_2 = "https://locationiq.org/v1/reverse.php?key=" & apikey & "&lat=" & lati & "&lon=" & longi & "&format=json"
+    url_3 = "https://api.bigdatacloud.net/data/reverse-geocode?latitude=40.780&longitude=-73.967&localityLanguage=en&key=[your api key]"
+    
+    url = url_2
+    
+    Debug.Print url_2
+    
+    Set httpReq = CreateObject("MSXML2.XMLHTTP")
+    With httpReq
+        .Open "GET", url, False
+        .Send
+    End With
+    
+    Dim response As String
+    response = httpReq.ResponseText
+    
+    Dim parsed As Dictionary
+    Set parsed = JsonConverter.ParseJson(response)
+    
+    cidade = parsed("address")("city")
+    estado = parsed("address")("state")
+    
+    
+    
+End Function
