@@ -1,0 +1,26 @@
+Sub Clear_Data()
+
+Dim ult_linha As Integer
+
+Sheets("Planilha1").Activate
+
+Application.ScreenUpdating = False
+
+If Not IsEmpty(Range("D5:E5").Value) Then
+
+ult_linha = Range("D5:E5").End(xlDown).Row
+
+    For linha = 5 To ult_linha
+    
+        Range("D5:E5").Select
+        Range(Selection, Selection.End(xlDown)).Select
+        Selection.ClearContents
+        Range("D5").Select
+        
+    Next
+
+End If
+
+Application.ScreenUpdating = True
+
+End Sub

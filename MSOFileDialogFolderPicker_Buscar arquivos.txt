@@ -1,0 +1,22 @@
+Sub Buscar_arquivos()
+
+' (1) Exibe o msoFileDialogFilePicker para selecionar os arquivos
+' (2) Checa se o usuario escolheu os arquivos
+' (3) Guarda o caminho da pasta selecionada em uma variavel do tipo string 
+
+    Dim strFilePath As String
+    With Application.FileDialog(msoFileDialogFilePicker)               
+        ' exibe a caixa de seleção de arquivos
+        If .Show <> 0 Then
+            strFilePath = .SelectedItems(1)
+        
+            ' *********************
+            ' colocar seu código aqui conforme seus critérios e condições
+            ' *********************
+            
+            ' Example: printa o caminho do arquivo ou pasta selecionado 
+
+            Debug.Print strFilePath 
+        End If
+    End With
+End Sub

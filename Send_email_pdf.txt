@@ -1,0 +1,35 @@
+Sub Enviar_email_pdf()
+
+Sheets("Planilha2").Activate
+
+Dim linha As Integer
+
+Dim source_file As String
+
+ult_linha = Range("C5").End(xlDown).Row
+
+Set obj_out = CreatObject("Outlook.Application")
+
+For linha = 3 To ult_linha
+    
+    Set email = objt_out.createitem(0)
+    
+    email.display
+    
+    assinatura = email.htmlbody
+    
+    email.To = Cells(lastrow, 5).Value
+    
+    email.Subject = "test"
+    
+    email.htmlbody = "olá " & assinatura
+    
+    source_file = "F:\USER\DOCUMENTS\PDF\" & Cells(linha, 5) & ".pdf"
+    
+    email.Attachments.Add source_file
+    
+     
+ Next
+
+
+End Sub
